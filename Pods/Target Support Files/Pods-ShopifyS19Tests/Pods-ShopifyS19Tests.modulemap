@@ -1,0 +1,6 @@
+framework module Pods_ShopifyS19Tests {
+  umbrella header "Pods-ShopifyS19Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
