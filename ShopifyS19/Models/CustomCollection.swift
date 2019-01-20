@@ -2,7 +2,7 @@ import Foundation
 
 //TODO remove the _ using codingKeys
 struct Shopify {
-    let customCollections: CustomCollection
+    let customCollections: [CustomCollection]
 }
 
 extension Shopify: Decodable {
@@ -12,17 +12,17 @@ extension Shopify: Decodable {
 }
 
 struct CustomCollection {
-    let id: Int?
-    let handle: String?
-    let title: String?
-    let updatedAt: String?
-    let bodyHtml: String?
-    let publishedAt: String?
-    let sortOrder: String?
-    let templateSuffix: String?
-    let publishedScope: String?
-    let adminGraphQLApiId: String?
-    let image: Image?
+    let id: Int
+    let handle: String
+    let title: String
+    let updatedAt: String
+    let bodyHtml: String
+    let publishedAt: String
+    let sortOrder: String
+    let templateSuffix: String
+    let publishedScope: String
+    let adminGraphQLApiId: String
+    let image: Image
 }
 
 extension CustomCollection: Decodable {

@@ -1,27 +1,30 @@
 import UIKit
 import Moya
 
-var collections: [CustomCollection] = []
+var myIndex = 0
 
 class MainTableViewController: UITableViewController {
+    
+    @IBOutlet var tableview: UITableView!
+    static var collections: Shopify?
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return collections.count
+        return (MainTableViewController.collections?.customCollections.count) ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.textLabel?.text = collections[indexPath.row].title
+        cell.textLabel?.text = MainTableViewController.collections?.customCollections[indexPath.row].title
         
         return cell
     }
     
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        myIndex = indexPath.row
+        myIndex = indexPath.row
         performSegue(withIdentifier: "segue", sender: self)
     }
     
@@ -30,12 +33,21 @@ class MainTableViewController: UITableViewController {
         CustomCollectionProvider.request(.getCustomCollection()) { result in
             do {
                 let decoder = JSONDecoder()
-                let data = try decoder.decode(CustomCollection.self, from: (result.value?.data)!)
+                MainTableViewController.collections = try decoder.decode(Shopify.self, from: (result.value?.data)!)
+//                print("\(MainTableViewController.collections)")
+                self.tableview.reloadData()
             } catch let err {
                 print("Err", err)
             }
             
+            
         }
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableview.reloadData()
     }
     
  
