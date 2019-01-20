@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4B44177AD8DE785B349F02FB /* Pods_ShopifyS19.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842BDF82D0C497FBA8A4CC8 /* Pods_ShopifyS19.framework */; };
 		64BAE2D4864713F2C1C58015 /* Pods_ShopifyS19Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1C707287402FD5F0FA555A /* Pods_ShopifyS19Tests.framework */; };
-		B32590CF21F3A12000F7B0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32590CE21F3A12000F7B0F6 /* AppDelegate.swift */; };
 		B32590D421F3A12000F7B0F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32590D221F3A12000F7B0F6 /* Main.storyboard */; };
 		B32590D621F3A12200F7B0F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32590D521F3A12200F7B0F6 /* Assets.xcassets */; };
 		B32590D921F3A12200F7B0F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32590D721F3A12200F7B0F6 /* LaunchScreen.storyboard */; };
@@ -24,6 +23,8 @@
 		B32590FA21F4EFBA00F7B0F6 /* CollectsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32590F821F4EFBA00F7B0F6 /* CollectsCollection.swift */; };
 		B32590FC21F4F75900F7B0F6 /* ProductCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32590FB21F4F75900F7B0F6 /* ProductCollection.swift */; };
 		B32590FD21F4F75900F7B0F6 /* ProductCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32590FB21F4F75900F7B0F6 /* ProductCollection.swift */; };
+		B325910021F5411B00F7B0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32590FF21F5411A00F7B0F6 /* AppDelegate.swift */; };
+		B325910121F5411B00F7B0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32590FF21F5411A00F7B0F6 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,6 @@
 		58A63821AF235F884BEFD435 /* Pods-ShopifyS19Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopifyS19Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShopifyS19Tests/Pods-ShopifyS19Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6A0A31994A01D33E967130F0 /* Pods-ShopifyS19.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopifyS19.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShopifyS19/Pods-ShopifyS19.debug.xcconfig"; sourceTree = "<group>"; };
 		B32590CB21F3A12000F7B0F6 /* ShopifyS19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopifyS19.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B32590CE21F3A12000F7B0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B32590D321F3A12000F7B0F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B32590D521F3A12200F7B0F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B32590D821F3A12200F7B0F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +56,7 @@
 		B32590F521F3E45500F7B0F6 /* CustomCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollection.swift; sourceTree = "<group>"; };
 		B32590F821F4EFBA00F7B0F6 /* CollectsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectsCollection.swift; sourceTree = "<group>"; };
 		B32590FB21F4F75900F7B0F6 /* ProductCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollection.swift; sourceTree = "<group>"; };
+		B32590FF21F5411A00F7B0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3AFB5271E19766E896E2C63 /* Pods-ShopifyS19Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopifyS19Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShopifyS19Tests/Pods-ShopifyS19Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFECEC6A432F5F92D67C7D7E /* Pods-ShopifyS19.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopifyS19.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShopifyS19/Pods-ShopifyS19.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,8 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				B32590FE21F4F76200F7B0F6 /* Models */,
-				B32590CE21F3A12000F7B0F6 /* AppDelegate.swift */,
 				B32590D221F3A12000F7B0F6 /* Main.storyboard */,
+				B32590FF21F5411A00F7B0F6 /* AppDelegate.swift */,
 				B32590F021F3B37E00F7B0F6 /* TableViewController.swift */,
 				B32590F221F3DB1200F7B0F6 /* CollectionService.swift */,
 				B32590EE21F3ADB200F7B0F6 /* MainTableViewController.swift */,
@@ -336,7 +337,7 @@
 				B32590F121F3B37E00F7B0F6 /* TableViewController.swift in Sources */,
 				B32590EF21F3ADB200F7B0F6 /* MainTableViewController.swift in Sources */,
 				B32590F621F3E45500F7B0F6 /* CustomCollection.swift in Sources */,
-				B32590CF21F3A12000F7B0F6 /* AppDelegate.swift in Sources */,
+				B325910021F5411B00F7B0F6 /* AppDelegate.swift in Sources */,
 				B32590FC21F4F75900F7B0F6 /* ProductCollection.swift in Sources */,
 				B32590F321F3DB1200F7B0F6 /* CollectionService.swift in Sources */,
 			);
@@ -346,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B325910121F5411B00F7B0F6 /* AppDelegate.swift in Sources */,
 				B32590E421F3A12300F7B0F6 /* ShopifyS19Tests.swift in Sources */,
 				B32590F421F3DB1200F7B0F6 /* CollectionService.swift in Sources */,
 				B32590FA21F4EFBA00F7B0F6 /* CollectsCollection.swift in Sources */,

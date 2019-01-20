@@ -14,11 +14,21 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "detailCell")
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "labelCell")
         cell.textLabel?.text = products?.products[indexPath.row].title
+        
+        var inventorySum: Int = 0
+        if let variants = products?.products[indexPath.row].variants {
+            for variant in variants {
+                inventorySum += variant.inventoryQuantity
+            }
+        }
+        cell.detailTextLabel?.text = "Available: \(inventorySum)"
+        
         let url = URL(string: (products?.products[indexPath.row].image.src)!)
         let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
         cell.imageView?.image = UIImage(data: data!)
+        
         return(cell)
     }
     
