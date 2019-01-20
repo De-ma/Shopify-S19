@@ -30,7 +30,7 @@ class MainTableViewController: UITableViewController {
         CustomCollectionProvider.request(.getCustomCollection()) { result in
             do {
                 let decoder = JSONDecoder()
-                let data = try decoder.decode(Shopify.self, from: (result.value?.data)!)
+                let data = try decoder.decode(CustomCollection.self, from: (result.value?.data)!)
             } catch let err {
                 print("Err", err)
             }
