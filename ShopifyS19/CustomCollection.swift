@@ -2,7 +2,7 @@ import Foundation
 
 //TODO remove the _ using codingKeys
 struct Shopify {
-    let customCollections: [CustomCollection]?
+    let customCollections: CustomCollection
 }
 
 extension Shopify: Decodable {
@@ -11,25 +11,50 @@ extension Shopify: Decodable {
     }
 }
 
-struct CustomCollection: Codable {
-    var id: Int?
-    var handle: String?
-    var title: String?
-    var updated_at: String?
-    var body_html: String?
-    var published_at: String?
-    var sort_order: String?
-    var template_suffix: String?
-    var published_scope: String?
-    var admin_graphql_api_id: String?
-    var image: Image?
-    
+struct CustomCollection {
+    let id: Int?
+    let handle: String?
+    let title: String?
+    let updatedAt: String?
+    let bodyHtml: String?
+    let publishedAt: String?
+    let sortOrder: String?
+    let templateSuffix: String?
+    let publishedScope: String?
+    let adminGraphQLApiId: String?
+    let image: Image?
 }
 
-struct Image: Codable {
-    var created_at: String?
-    var alt: String?
-    var width: Int?
-    var height: Int?
-    var src: String?
+extension CustomCollection: Decodable {
+    enum CodingKeys: String, CodingKey {
+        case id
+        case handle
+        case title
+        case updatedAt = "updated_at"
+        case bodyHtml = "body_html"
+        case publishedAt = "published_at"
+        case sortOrder = "sort_order"
+        case templateSuffix = "template_suffix"
+        case publishedScope = "published_scope"
+        case adminGraphQLApiId = "admin_graphql_api_id"
+        case image
+    }
+}
+
+struct Image {
+    let createdAt: String?
+    let alt: String?
+    let width: Int?
+    let height: Int?
+    let src: String?
+}
+
+extension Image: Decodable {
+    enum CodingKeys: String, CodingKey {
+        case createdAt = "created_at"
+        case alt
+        case width
+        case height
+        case src
+    }
 }
