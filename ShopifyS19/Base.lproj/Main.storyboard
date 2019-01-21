@@ -29,7 +29,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="deK-1h-HnV" secondAttribute="bottom" constant="15" id="HJL-sm-a8A"/>
                                 <constraint firstItem="deK-1h-HnV" firstAttribute="leading" secondItem="BBX-WW-FtX" secondAttribute="leading" constant="61" id="VML-m2-tk2"/>

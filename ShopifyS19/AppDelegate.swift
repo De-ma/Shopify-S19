@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  ShopifyS19
-//
-//  Created by Dema Abu Adas on 2019-01-19.
-//  Copyright © 2019 Dema Abu Adas. All rights reserved.
-
 import UIKit
 
 @UIApplicationMain

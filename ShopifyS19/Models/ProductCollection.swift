@@ -14,7 +14,7 @@ struct ProductData {
     let handle: String
     let updatedAt: String
     let publishedAt : String
-    let templateSuffix: String? //uhh its null
+    let templateSuffix: String? 
     let tags: String
     let publishedScope: String
     let adminGraphQLApiId: String
@@ -55,18 +55,18 @@ struct Variant {
     let sku: String
     let position: Int
     let inventoryPolicy: String
-    let compareAtPrice: String? //uhh its null
+    let compareAtPrice: String? 
     let fulfillmentService: String?
-    let inventoryManagement: String? //uhh its null
+    let inventoryManagement: String?
     let option1: String
-    let option2: String? //null
-    let option3: String? //null
+    let option2: String?
+    let option3: String?
     let createdAt: String
     let updatedAt: String
     let taxable: Bool
-    let barcode: String? //null
+    let barcode: String?
     let grams: Int
-    let imageId: String? //null //maybe i can assume this to be a int
+    let imageId: String?
     let weight: Double
     let weightUnit: String
     let inventoryItemId: Int

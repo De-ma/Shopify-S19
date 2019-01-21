@@ -1,6 +1,5 @@
 import Foundation
 
-//TODO remove the _ using codingKeys
 struct Shopify {
     let customCollections: [CustomCollection]
 }

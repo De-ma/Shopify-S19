@@ -25,9 +25,14 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         cell.detailTextLabel?.text = "Available: \(inventorySum)"
         
-        let url = URL(string: (products?.products[indexPath.row].image.src)!)
-        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-        cell.imageView?.image = UIImage(data: data!)
+        /**
+         A little confused as the spec said "collections image" which means they'd all have the same photo.
+        */
+        if let url = URL(string: (MainTableViewController.collections?.customCollections[myIndex].image.src ?? "")) {
+            let data = try? Data(contentsOf: url)
+            cell.imageView?.image = UIImage(data: data!)
+        }
+
         
         return(cell)
     }
@@ -53,7 +58,6 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 let decoder = JSONDecoder()
                 self.collects = try decoder.decode(Collects.self, from: (result.value?.data)!)
                 for item in (self.collects?.collects)! {
-                    print("uh: \(item.productId)")
                     self.productIds.append(item.productId)
                 }
                 completion()
@@ -64,7 +68,6 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func getProducts() {
-        print("PRODUCTS: \(productIds)")
         CustomCollectionProvider.request(.getProducts(productIds: productIds)) { result in
             do {
                 let decoder = JSONDecoder()

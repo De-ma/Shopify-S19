@@ -34,7 +34,6 @@ class MainTableViewController: UITableViewController {
             do {
                 let decoder = JSONDecoder()
                 MainTableViewController.collections = try decoder.decode(Shopify.self, from: (result.value?.data)!)
-//                print("\(MainTableViewController.collections)")
                 self.tableview.reloadData()
             } catch let err {
                 print("Err", err)

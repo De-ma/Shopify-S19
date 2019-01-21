@@ -17,10 +17,11 @@ extension CollectionService: TargetType {
     case let .getProducts(productIds):
       var firstPart = "https://shopicruit.myshopify.com/admin/products.json?ids="
       let lastPart = "&page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6"
+      
       for id in productIds {
-        print("ID: \(id)")
         firstPart += "\(id),"
       }
+      
       firstPart.remove(at: firstPart.index(before: firstPart.endIndex))
       firstPart += lastPart
       return URL(string: firstPart)!
